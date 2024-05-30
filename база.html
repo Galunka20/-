@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Список друзей</title>
+    
+<style>
+    body {
+      background-color: #2E8B57;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+   .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+    }
+   
+    .left-panel {
+      flex-basis: 50%;
+      background-color: #48D1CC;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .right-panel {
+      flex-basis: 50%;
+      background-color: #48D1CC;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    } 
+
+    .book-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }  
+
+    .book-list li {
+      background-color: #ffffff;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }  
+
+    .book-list li h2 {
+      margin-bottom: 10px;
+    }
+    .book-list li p {
+      margin-bottom: 5px;
+    }
+
+     @media (max-width: 700px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left-panel, .right-panel {
+        flex-basis: 100%;
+      }
+    }
+
+        </style>   
+</head>
+<body>
+  <div class="container">
+    <div class="left-panel">
+      <h2>Новый друг</h2>
+      <p>
+        <label for="title">Ф.И.О.</label>
+        <input type="text" id="title" required>
+      </p>
+      <p>
+        <label for="name">Дата рождения</label>
+        <input type="text" id="author" required>
+      </p>
+      <p>
+        <label for="pages">Сколько лет дружим</label>
+        <input type="number" id="pages" required>
+      </p>
+      <button onclick="addBook()">Добавить</button>
+    </div>
+    <div class="right-panel">
+      <h2>Список друзей</h2>
+      <ul class="book-list">
+      </ul>
+    </div>
+  </div>
+
+ <script>
+let books = [];
+function addBook() {
+  let title = document.getElementById('title').value;
+  let author = document.getElementById('author').value;
+  let pages = document.getElementById('pages').value;
+  let book = {
+    title: title,
+    author: author,
+    pages: Number(pages)
+  };
+
+   books.push(book);
+  displayBooks();
+}
+
+function displayBooks() {
+  let bookList = document.querySelector('.book-list');
+  bookList.innerHTML = '';
+  books.forEach(book => {
+    let li = document.createElement('li');
+    li.innerHTML = `<h2>${book.title}</h2>
+                      <p>Дата рождения: ${book.author}</p>
+                      <p>Сколько лет дружбе: ${book.pages}</p>`;
+    bookList.appendChild(li);
+  });
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    font-family: Cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #9390a3; /* Фиолетовый цвет фона */
+    color: white;
+    background-size: cover;
+     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.10);
+}
+ 
+header, footer {
+    background-color: #2E8B57; /* Фиолетовый цвет для header и footer */
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+ 
+.content {
+    flex: 1;
+}
+ 
+.footer {
+    background: #2E8B57;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#48D1CC; /* Фиолетовый цвет фона */
+    color: white;
+}
+
+#accounts {
+    display: flex;
+    justify-content: center;
+}
+ 
+.account {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #4e5163; /* Фиолетовая рамка для аккаунтов */
+    text-align: center;
+    background-color: #2E8B57; /* Цвет фона аккаунта */
+    cursor: pointer;
+    border-radius: 10px;
+}
+ 
+button {
+    background-color: #4e5163;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    /* Стили для планшетов и мобильных устройств */
+}
+ 
+@media only screen and (max-width: 480px) {
+    /* Стили для мобильных устройств */
+}
+
+.hover-effect1 {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.hover-effect1:hover {
+    -moz-box-shadow: 0 0 50px #6A5ACD;
+    -webkit-box-shadow: 0 0 50px #6A5ACD;
+    box-shadow:0 0 50px #344e8b; 
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.image-button {
+  position: absolute;
+  top: 50%;
+  margin: 100px 840px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #4e5163;
+  padding: 5px 50px;
+}
